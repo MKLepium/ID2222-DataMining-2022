@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class DocSim {
     public static void main(String[] args) throws IOException {
         //Get Files in resources folder
-        int k = 8;
+        int k = 9;
         Path rpath = Paths.get("../resources");
         List<Path> filePaths;
         try (Stream<Path> paths = Files.find(rpath, 1,

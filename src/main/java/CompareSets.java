@@ -19,7 +19,7 @@ public class CompareSets {
         HashSet<Long> intersection = new HashSet<Long>(a.getDocument());
         intersection.retainAll(b.getDocument());
         HashSet<Long> union = new HashSet<Long>(a.getDocument());
-        union.retainAll(b.getDocument());
+        union.addAll(b.getDocument());
         return (double)intersection.size() / union.size();
     }
 }
