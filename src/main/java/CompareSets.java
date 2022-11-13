@@ -1,8 +1,8 @@
 import java.util.HashSet;
 
 public class CompareSets {
-    Shingling a;
-    Shingling b;
+    private Shingling a;
+    private Shingling b;
 
     public CompareSets(Shingling a, Shingling b) {
         this.a = a;
@@ -16,9 +16,9 @@ public class CompareSets {
      * @return
      */
     public double compare() {
-        HashSet<Long> intersection = new HashSet<Long>(a.getDocument());
+        HashSet<Integer> intersection = new HashSet<Integer>(a.getDocument());
         intersection.retainAll(b.getDocument());
-        HashSet<Long> union = new HashSet<Long>(a.getDocument());
+        HashSet<Integer> union = new HashSet<Integer>(a.getDocument());
         union.addAll(b.getDocument());
         return (double)intersection.size() / union.size();
     }
